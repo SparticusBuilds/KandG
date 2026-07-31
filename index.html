@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KNG Care and Repair — Newtown, Powys</title>
+<title>K&amp;G — Shropshire &amp; Mid Wales</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='14' fill='%2323293D'/%3E%3Ctext x='100' y='112' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='62' fill='%23FFFFFF'%3EK%26amp%3BG%3C/text%3E%3Crect x='55' y='126' width='90' height='3' fill='%2378A428'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +49,16 @@
     position:relative;
   }
 
+  .sr-only{
+    position:absolute;
+    width:1px; height:1px;
+    padding:0; margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
   header.hero{
     padding:76px 28px 56px;
     text-align:center;
@@ -70,12 +80,6 @@
     justify-content:center;
     gap:10px;
   }
-  .eyebrow::before{
-    content:"";
-    width:20px; height:2px;
-    background:var(--brick);
-    display:inline-block;
-  }
   h1.title{
     font-size:clamp(2.4rem, 6vw, 3.6rem);
     font-weight:700;
@@ -83,9 +87,11 @@
     margin:0 auto;
   }
   .tagline{
-    font-size:clamp(1.15rem, 2.6vw, 1.4rem);
-    color:var(--slate);
-    font-weight:600;
+    font-family:'Zilla Slab', serif;
+    font-size:clamp(2rem, 6vw, 2.8rem);
+    line-height:1.1;
+    color:var(--ink);
+    font-weight:700;
     margin-top:18px;
   }
   .lede{
@@ -289,6 +295,7 @@
     padding:34px 30px;
     position:relative;
     text-align:center;
+    border-radius:22px;
   }
   .why-portrait{
     width:110px;
@@ -333,6 +340,24 @@
     border:2px solid var(--ink);
     padding:40px 30px;
     box-shadow:5px 5px 0 var(--brick);
+    border-radius:22px;
+  }
+  .footer-logo{
+    display:block;
+    margin:0 auto 18px;
+  }
+  .footer-tagline{
+    font-size:clamp(2rem, 6vw, 2.8rem);
+    line-height:1.1;
+    margin-bottom:10px;
+  }
+  .footer-subheading{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--slate);
+    margin:0 0 18px;
   }
   footer h2{
     font-size:1.9rem;
@@ -358,14 +383,14 @@
 
 <div class="wrap">
   <header class="hero">
-    <svg class="site-logo" width="88" height="88" viewBox="0 0 200 200" role="img" aria-label="K&amp;G Care and Repair logo">
+    <svg class="site-logo" width="112" height="112" viewBox="0 0 200 200" role="img" aria-label="K&amp;G logo">
       <rect width="200" height="200" rx="14" fill="#23293D"/>
       <text x="100" y="112" text-anchor="middle" font-family="'Poppins', 'Zilla Slab', sans-serif" font-weight="800" font-size="62" fill="#FFFFFF">K<tspan fill="#78A428">&amp;</tspan>G</text>
       <rect x="55" y="126" width="90" height="3" fill="#78A428"/>
     </svg>
-    <div class="eyebrow">Newtown &amp; Mid Wales</div>
-    <h1 class="title">KNG Care<br>and Repair</h1>
     <p class="tagline">One call. Many solutions.</p>
+    <div class="eyebrow">Shropshire &amp; Mid Wales</div>
+    <h1 class="sr-only">K&amp;G — Handyperson, Cleaning and Care Services, Shropshire &amp; Mid Wales</h1>
     <p class="lede">Handyperson, cleaning and care services for your home, your space, and the people you look after — done by one dependable local contact, not a call centre.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:07940340883">Call 07940 340883</a>
@@ -375,7 +400,7 @@
 
   <section class="services">
     <div class="panel">
-      <div class="panel-label">01 — Handyperson</div>
+      <div class="panel-label">Handyperson</div>
       <h2>Handyperson Services</h2>
       <ul>
         <li>General repairs and maintenance</li>
@@ -389,7 +414,7 @@
     </div>
 
     <div class="panel moss">
-      <div class="panel-label">02 — Cleaning</div>
+      <div class="panel-label">Cleaning</div>
       <h2>Cleaning Services</h2>
       <ul>
         <li>Full or partial home cleans</li>
@@ -402,7 +427,7 @@
     </div>
 
     <div class="panel brick">
-      <div class="panel-label">03 — Care &amp; Support</div>
+      <div class="panel-label">Care &amp; Support</div>
       <h2>Care and Support Services</h2>
       <ul>
         <li>Elderly care assistance</li>
@@ -416,7 +441,7 @@
 
   <section class="why">
     <div class="why-box">
-      <img class="why-portrait" src="glyn-kim.jpg" alt="Glyn and Kim, KNG Care and Repair">
+      <img class="why-portrait" src="glyn-kim.jpg" alt="Glyn and Kim, K&amp;G">
       <h2>Why choose us?</h2>
       <p>A professional and friendly service that's dependable, respectful and trustworthy — fully committed, flexible and affordable. Fully insured and DBS checked, with references and a portfolio available on request.</p>
       <div class="badges">
@@ -461,11 +486,17 @@
 
   <footer>
     <div class="call-plate">
-      <h2>Get in touch today</h2>
+      <svg class="footer-logo" width="84" height="84" viewBox="0 0 200 200" role="img" aria-label="K&amp;G logo">
+        <rect width="200" height="200" rx="14" fill="#23293D"/>
+        <text x="100" y="112" text-anchor="middle" font-family="'Poppins', 'Zilla Slab', sans-serif" font-weight="800" font-size="62" fill="#FFFFFF">K<tspan fill="#78A428">&amp;</tspan>G</text>
+        <rect x="55" y="126" width="90" height="3" fill="#78A428"/>
+      </svg>
+      <h2 class="footer-tagline">One call. Many solutions.</h2>
+      <p class="footer-subheading">Get in touch today</p>
       <p class="contact-line">Phone: <a href="tel:07940340883">07940 340883</a></p>
       <p class="contact-line">Email: <a href="mailto:kngcareandrepair@gmail.com">kngcareandrepair@gmail.com</a></p>
     </div>
-    <p class="location">KNG Care and Repair · Serving Newtown &amp; Mid Wales</p>
+    <p class="location">K&amp;G · One call. Many solutions. · Serving Shropshire &amp; Mid Wales</p>
   </footer>
 </div>
 
