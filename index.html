@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KNG Care and Repair — Newtown, Powys</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Crect width='140' height='140' fill='%232A2E29'/%3E%3Ccircle cx='70' cy='70' r='60' fill='none' stroke='%23A5502F' stroke-width='6'/%3E%3Ctext x='70' y='82' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='44' fill='%23F6F2E7'%3EKNG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:      #E8E2D2; /* warm limestone background */
+    --stone-deep: #DCD4BF;
+    --ink:        #2A2E29; /* charcoal slate */
+    --slate:      #4C5B5A; /* wet-slate blue-grey */
+    --moss:       #5F7245; /* hillside moss */
+    --brick:      #A5502F; /* muted brick, not terracotta */
+    --paper:      #F6F2E7;
+    --line:       rgba(42,46,41,0.14);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--stone);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Zilla Slab', serif;
+    line-height:1.08;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px;
+    position:relative;
+  }
+
+  header.hero{
+    padding:76px 28px 56px;
+    text-align:left;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--slate);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:20px; height:2px;
+    background:var(--brick);
+    display:inline-block;
+  }
+  h1.title{
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    font-weight:700;
+    max-width:11ch;
+  }
+  .tagline{
+    font-size:clamp(1.15rem, 2.6vw, 1.4rem);
+    color:var(--slate);
+    font-weight:600;
+    margin-top:18px;
+  }
+  .lede{
+    max-width:46ch;
+    margin-top:14px;
+    color:var(--ink);
+    opacity:0.85;
+  }
+  .cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:24px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:focus-visible{
+    outline:3px solid var(--brick);
+    outline-offset:2px;
+  }
+  .btn-primary{
+    background:var(--brick);
+    color:var(--paper);
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .btn-primary:hover{transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink);}
+  .btn-secondary{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--ink);
+  }
+  .btn-secondary:hover{background:var(--ink); color:var(--paper);}
+
+  /* ===== service panels — "signboards" ===== */
+  section.services{
+    padding:20px 28px 10px;
+  }
+  .panel{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:5px solid var(--slate);
+    padding:32px 30px;
+    margin-bottom:26px;
+    position:relative;
+    box-shadow:0 1px 0 var(--line);
+  }
+  .panel.moss{border-left-color:var(--moss);}
+  .panel.brick{border-left-color:var(--brick);}
+  .panel-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--slate);
+    margin-bottom:6px;
+  }
+  .panel h2{
+    font-size:1.6rem;
+    margin-bottom:16px;
+  }
+  .panel ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    columns:2;
+    column-gap:28px;
+  }
+  .panel li{
+    break-inside:avoid;
+    padding:7px 0 7px 20px;
+    position:relative;
+    font-size:15.5px;
+  }
+  .panel li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--slate);
+  }
+  .panel.moss li::before{color:var(--moss);}
+  .panel.brick li::before{color:var(--brick);}
+
+  @media (max-width:520px){
+    .panel ul{columns:1;}
+  }
+
+  /* ===== recent work / crossfade ===== */
+  section.work{padding:36px 28px 10px;}
+  .work-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .work-frame{
+    position:relative;
+    margin:0;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--stone-deep);
+  }
+  .work-frame img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .work-frame .w-before{position:relative; z-index:1;}
+  .work-frame .w-after{
+    position:absolute;
+    z-index:2;
+    opacity:0;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .work-frame .w-after{
+      animation:crossfade 11s ease-in-out infinite;
+    }
+    .work-frame:nth-child(1) .w-after{ animation-delay:0s; }
+    .work-frame:nth-child(2) .w-after{ animation-delay:3.5s; animation-duration:13s; }
+    .work-frame:nth-child(3) .w-after{ animation-delay:7s; animation-duration:9.5s; }
+  }
+  @keyframes crossfade{
+    0%, 38%   { opacity:0; }
+    50%, 88%  { opacity:1; }
+    100%      { opacity:0; }
+  }
+  .work-frame figcaption{
+    position:absolute;
+    z-index:3;
+    bottom:0; left:0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--paper);
+    background:rgba(42,46,41,0.72);
+    padding:5px 10px;
+  }
+  @media (max-width:560px){
+    .work-grid{grid-template-columns:1fr;}
+  }
+
+  /* ===== testimonials — horizontal scroll ===== */
+  section.testimonials{padding:36px 28px 10px;}
+  .t-track{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:6px;
+    scrollbar-width:thin;
+    -webkit-overflow-scrolling:touch;
+  }
+  .t-card{
+    flex:0 0 82%;
+    scroll-snap-align:start;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-top:3px solid var(--brick);
+    padding:26px 24px;
+  }
+  @media (min-width:600px){
+    .t-card{flex-basis:46%;}
+  }
+  .t-quote{
+    font-family:'Zilla Slab', serif;
+    font-size:1.15rem;
+    line-height:1.4;
+    margin:0 0 14px;
+  }
+  .t-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--slate);
+    margin:0;
+  }
+  .t-controls{
+    display:flex;
+    gap:10px;
+    margin-top:14px;
+  }
+  .t-btn{
+    width:38px; height:38px;
+    border-radius:50%;
+    border:1.5px solid var(--ink);
+    background:transparent;
+    font-size:18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .t-btn:hover{background:var(--ink); color:var(--paper);}
+  .t-btn:focus-visible{outline:3px solid var(--brick); outline-offset:2px;}
+
+  /* ===== why choose us ===== */
+  section.why{
+    padding:36px 28px;
+  }
+  .why-box{
+    background:var(--ink);
+    color:var(--stone);
+    padding:34px 30px;
+    position:relative;
+  }
+  .why-portrait{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--brick);
+    margin-bottom:16px;
+    display:block;
+  }
+  .why-box h2{
+    color:var(--stone);
+    font-size:1.5rem;
+    margin-bottom:14px;
+  }
+  .why-box p{margin:0; opacity:0.92; max-width:56ch;}
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+  }
+  .badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    border:1px solid rgba(232,226,210,0.35);
+    padding:6px 12px;
+    color:var(--stone);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+
+  /* ===== contact / footer ===== */
+  footer{
+    padding:56px 28px 70px;
+    text-align:center;
+  }
+  footer .call-plate{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    padding:40px 30px;
+    box-shadow:5px 5px 0 var(--brick);
+  }
+  footer h2{
+    font-size:1.9rem;
+    margin-bottom:10px;
+  }
+  footer .contact-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    margin:6px 0;
+  }
+  footer .contact-line a{text-decoration:underline; text-decoration-color:var(--brick); text-underline-offset:3px;}
+  .location{
+    margin-top:22px;
+    font-size:13px;
+    color:var(--slate);
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  ::selection{background:var(--brick); color:var(--paper);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Newtown &amp; Mid Wales</div>
+    <h1 class="title">KNG Care<br>and Repair</h1>
+    <p class="tagline">One call. Many solutions.</p>
+    <p class="lede">Handyperson, cleaning and care services for your home, your space, and the people you look after — done by one dependable local contact, not a call centre.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:07940340883">Call 07940 340883</a>
+      <a class="btn btn-secondary" href="mailto:kngcareandrepair@gmail.com">Email us</a>
+    </div>
+  </header>
+
+  <section class="services">
+    <div class="panel">
+      <div class="panel-label">01 — Handyperson</div>
+      <h2>Handyperson Services</h2>
+      <ul>
+        <li>General repairs and maintenance</li>
+        <li>Garden services</li>
+        <li>Outdoor animal runs</li>
+        <li>Furniture assembly</li>
+        <li>Painting and decorating</li>
+        <li>Minor plumbing and electrical fixes</li>
+        <li>Honey-do lists — the jobs that never get done</li>
+      </ul>
+    </div>
+
+    <div class="panel moss">
+      <div class="panel-label">02 — Cleaning</div>
+      <h2>Cleaning Services</h2>
+      <ul>
+        <li>Full or partial home cleans</li>
+        <li>Declutter and organise</li>
+        <li>Deep cleaning</li>
+        <li>End of tenancy cleaning</li>
+        <li>Regular or one-off visits</li>
+        <li>Carpet cleaning</li>
+      </ul>
+    </div>
+
+    <div class="panel brick">
+      <div class="panel-label">03 — Care &amp; Support</div>
+      <h2>Care and Support Services</h2>
+      <ul>
+        <li>Elderly care assistance</li>
+        <li>Home help and companionship</li>
+        <li>Light household tasks</li>
+        <li>Errands and daily support</li>
+        <li>Personal care (PA) — registered with PCC for direct payment work</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="panel-label" style="padding-left:2px;">Recent Work</div>
+    <h2 style="font-size:1.6rem; margin-bottom:18px; padding-left:2px;">A few completed jobs</h2>
+    <div class="work-grid">
+      <figure class="work-frame">
+        <img class="w-before" src="https://placehold.co/640x480/DCD4BF/2A2E29?text=Before+photo+1" alt="Before photo of completed job 1">
+        <img class="w-after" src="https://placehold.co/640x480/E8E2D2/2A2E29?text=After+photo+1" alt="After photo of completed job 1">
+        <figcaption>Job 01</figcaption>
+      </figure>
+      <figure class="work-frame">
+        <img class="w-before" src="https://placehold.co/640x480/DCD4BF/2A2E29?text=Before+photo+2" alt="Before photo of completed job 2">
+        <img class="w-after" src="https://placehold.co/640x480/E8E2D2/2A2E29?text=After+photo+2" alt="After photo of completed job 2">
+        <figcaption>Job 02</figcaption>
+      </figure>
+      <figure class="work-frame">
+        <img class="w-before" src="https://placehold.co/640x480/DCD4BF/2A2E29?text=Before+photo+3" alt="Before photo of completed job 3">
+        <img class="w-after" src="https://placehold.co/640x480/E8E2D2/2A2E29?text=After+photo+3" alt="After photo of completed job 3">
+        <figcaption>Job 03</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="panel-label" style="padding-left:2px;">What people say</div>
+    <h2 style="font-size:1.6rem; margin-bottom:18px; padding-left:2px;">Testimonials</h2>
+    <div class="t-track" id="t-track">
+      <!-- PLACEHOLDER — replace with Glyn's real testimonial once the job's done. Duplicate this
+           block for each additional testimonial; the track scrolls to fit however many there are. -->
+      <div class="t-card">
+        <p class="t-quote">"Placeholder — swap this for a real customer quote once one's confirmed."</p>
+        <p class="t-name">— Name, Town</p>
+      </div>
+    </div>
+    <div class="t-controls">
+      <button class="t-btn" id="t-prev" aria-label="Previous testimonial">‹</button>
+      <button class="t-btn" id="t-next" aria-label="Next testimonial">›</button>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="why-box">
+      <img class="why-portrait" src="https://placehold.co/200x200/4C5B5A/F6F2E7?text=Glyn" alt="Glyn Lewis, KNG Care and Repair">
+      <h2>Why choose us?</h2>
+      <p>A professional and friendly service that's dependable, respectful and trustworthy — fully committed, flexible and affordable. Fully insured and DBS checked, with references and a portfolio available on request.</p>
+      <div class="badges">
+        <span class="badge">Fully Insured</span>
+        <span class="badge">DBS Checked</span>
+        <span class="badge">References Available</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="call-plate">
+      <h2>Get in touch today</h2>
+      <p class="contact-line">Phone: <a href="tel:07940340883">07940 340883</a></p>
+      <p class="contact-line">Email: <a href="mailto:kngcareandrepair@gmail.com">kngcareandrepair@gmail.com</a></p>
+    </div>
+    <p class="location">KNG Care and Repair · Serving Newtown &amp; Mid Wales</p>
+  </footer>
+</div>
+
+
+<script>
+  const track = document.getElementById('t-track');
+  const prevBtn = document.getElementById('t-prev');
+  const nextBtn = document.getElementById('t-next');
+  if(track && prevBtn && nextBtn){
+    const scrollAmount = () => track.querySelector('.t-card').offsetWidth + 16;
+    prevBtn.addEventListener('click', () => track.scrollBy({left:-scrollAmount(), behavior:'smooth'}));
+    nextBtn.addEventListener('click', () => track.scrollBy({left:scrollAmount(), behavior:'smooth'}));
+  }
+</script>
+</body>
+</html>
