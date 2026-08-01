@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K&amp;G — Shropshire &amp; Mid Wales</title>
-<meta property="og:title" content="K&amp;G — Care, Repair, Cleaning &amp; Support">
+<title>KNG — Shropshire &amp; Mid Wales</title>
+<meta property="og:title" content="KNG — Care, Repair, Cleaning &amp; Support">
 <meta property="og:description" content="Handyperson, cleaning and care services across Shropshire and Mid Wales. One call. Many solutions.">
 <meta property="og:image" content="https://sparticusbuilds.github.io/KandG/logo-og.png">
 <meta property="og:url" content="https://sparticusbuilds.github.io/KandG/">
 <meta property="og:type" content="website">
 <meta name="description" content="Handyperson, cleaning and care services across Shropshire and Mid Wales. One call. Many solutions.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='14' fill='%2323293D'/%3E%3Ctext x='100' y='112' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='62' fill='%23FFFFFF'%3EK%26amp%3BG%3C/text%3E%3Crect x='55' y='126' width='90' height='3' fill='%2378A428'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Ccircle cx='70' cy='70' r='68' fill='%232A2E29'/%3E%3Ccircle cx='70' cy='70' r='66' fill='none' stroke='%23D6487F' stroke-width='2.5'/%3E%3Ccircle cx='70' cy='70' r='58' fill='none' stroke='%23F6F2E7' stroke-width='1'/%3E%3Ctext x='70' y='60' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23F6F2E7'%3EKNG%3C/text%3E%3Ctext x='70' y='80' text-anchor='middle' font-family='monospace' font-size='7.2' letter-spacing='1' fill='%23F6F2E7'%3EONE CALL.%3C/text%3E%3Ctext x='70' y='90' text-anchor='middle' font-family='monospace' font-size='7.2' letter-spacing='1' fill='%23F6F2E7'%3EMANY SOLUTIONS.%3C/text%3E%3Cpath d='M50,104 Q70,111 90,104' stroke='%23D6487F' stroke-width='1.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -53,6 +53,15 @@
     margin:0 auto;
     padding:0 28px;
     position:relative;
+  }
+  #cord-line{
+    position:fixed;
+    top:0; left:0;
+    width:16px;
+    height:100vh;
+    background:#D6487F;
+    z-index:0;
+    pointer-events:none;
   }
 
   .sr-only{
@@ -388,15 +397,20 @@
 <body>
 
 <div class="wrap">
+  <div id="cord-line"></div>
   <header class="hero">
-    <svg class="site-logo" width="112" height="112" viewBox="0 0 200 200" role="img" aria-label="K&amp;G logo">
-      <rect width="200" height="200" rx="14" fill="#23293D"/>
-      <text x="100" y="112" text-anchor="middle" font-family="'Poppins', 'Zilla Slab', sans-serif" font-weight="800" font-size="62" fill="#FFFFFF">K<tspan fill="#78A428">&amp;</tspan>G</text>
-      <rect x="55" y="126" width="90" height="3" fill="#78A428"/>
+    <svg class="site-logo" width="112" height="112" viewBox="0 0 140 140" role="img" aria-label="KNG logo">
+      <circle cx="70" cy="70" r="68" fill="#2A2E29"/>
+      <circle cx="70" cy="70" r="66" fill="none" stroke="#D6487F" stroke-width="2.5"/>
+      <circle cx="70" cy="70" r="58" fill="none" stroke="#F6F2E7" stroke-width="1"/>
+      <text x="70" y="60" text-anchor="middle" font-family="'Zilla Slab', Georgia, serif" font-weight="700" font-size="30" fill="#F6F2E7">KNG</text>
+      <text x="70" y="80" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.2" letter-spacing="1" fill="#F6F2E7">ONE CALL.</text>
+      <text x="70" y="90" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.2" letter-spacing="1" fill="#F6F2E7">MANY SOLUTIONS.</text>
+      <path d="M50,104 Q70,111 90,104" stroke="#D6487F" stroke-width="1.5" fill="none"/>
     </svg>
     <p class="tagline">One call. Many solutions.</p>
     <div class="eyebrow">Shropshire &amp; Mid Wales</div>
-    <h1 class="sr-only">K&amp;G — Handyperson, Cleaning and Care Services, Shropshire &amp; Mid Wales</h1>
+    <h1 class="sr-only">KNG — Handyperson, Cleaning and Care Services, Shropshire &amp; Mid Wales</h1>
     <p class="lede">Handyperson, cleaning and care services for your home, your space, and the people you look after — done by one dependable local contact, not a call centre.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:07940340883">Call 07940 340883</a>
@@ -447,7 +461,7 @@
 
   <section class="why">
     <div class="why-box">
-      <img class="why-portrait" src="glyn-kim.jpg" alt="Glyn and Kim, K&amp;G">
+      <img class="why-portrait" src="glyn-kim.jpg" alt="Glyn and Kim, KNG">
       <h2>Why choose us?</h2>
       <p>A professional and friendly service that's dependable, respectful and trustworthy — fully committed, flexible and affordable. Fully insured and DBS checked, with references and a portfolio available on request.</p>
       <div class="badges">
@@ -492,17 +506,21 @@
 
   <footer>
     <div class="call-plate">
-      <svg class="footer-logo" width="84" height="84" viewBox="0 0 200 200" role="img" aria-label="K&amp;G logo">
-        <rect width="200" height="200" rx="14" fill="#23293D"/>
-        <text x="100" y="112" text-anchor="middle" font-family="'Poppins', 'Zilla Slab', sans-serif" font-weight="800" font-size="62" fill="#FFFFFF">K<tspan fill="#78A428">&amp;</tspan>G</text>
-        <rect x="55" y="126" width="90" height="3" fill="#78A428"/>
+      <svg class="footer-logo" width="84" height="84" viewBox="0 0 140 140" role="img" aria-label="KNG logo">
+        <circle cx="70" cy="70" r="68" fill="#2A2E29"/>
+        <circle cx="70" cy="70" r="66" fill="none" stroke="#D6487F" stroke-width="2.5"/>
+        <circle cx="70" cy="70" r="58" fill="none" stroke="#F6F2E7" stroke-width="1"/>
+        <text x="70" y="60" text-anchor="middle" font-family="'Zilla Slab', Georgia, serif" font-weight="700" font-size="30" fill="#F6F2E7">KNG</text>
+        <text x="70" y="80" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.2" letter-spacing="1" fill="#F6F2E7">ONE CALL.</text>
+        <text x="70" y="90" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.2" letter-spacing="1" fill="#F6F2E7">MANY SOLUTIONS.</text>
+        <path d="M50,104 Q70,111 90,104" stroke="#D6487F" stroke-width="1.5" fill="none"/>
       </svg>
       <h2 class="footer-tagline">One call. Many solutions.</h2>
       <p class="footer-subheading">Get in touch today</p>
       <p class="contact-line">Phone: <a href="tel:07940340883">07940 340883</a></p>
       <p class="contact-line">Email: <a href="mailto:kngcareandrepair@gmail.com">kngcareandrepair@gmail.com</a></p>
     </div>
-    <p class="location">K&amp;G · One call. Many solutions. · Serving Shropshire &amp; Mid Wales</p>
+    <p class="location">KNG · One call. Many solutions. · Serving Shropshire &amp; Mid Wales</p>
   </footer>
 </div>
 
