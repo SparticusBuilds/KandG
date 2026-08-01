@@ -16,14 +16,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --stone:      #E8E2D2; /* warm limestone background */
-    --stone-deep: #DCD4BF;
-    --ink:        #2A2E29; /* body text charcoal */
-    --slate:      #3A4361; /* brand navy-grey */
-    --moss:       #78A428; /* brand green, sampled from logo */
-    --brick:      #23293D; /* brand navy, sampled from logo */
-    --paper:      #F6F2E7;
-    --line:       rgba(42,46,41,0.14);
+    --stone:      #23293D; /* deep navy page background */
+    --stone-deep: #2E3550; /* subtle secondary navy surface */
+    --ink:        #F3EEE3; /* primary text / inverted card background, warm cream */
+    --slate:      #C99AB0; /* dusty rose, secondary/label text */
+    --moss:       #E37DA0; /* lighter pink accent */
+    --brick:      #D6487F; /* primary badge pink accent */
+    --paper:      #303756; /* card background, lifted navy */
+    --line:       rgba(243,238,227,0.14);
   }
 
   *{box-sizing:border-box;}
@@ -138,11 +138,11 @@
     outline-offset:2px;
   }
   .btn-primary{
-    background:var(--brick);
-    color:var(--paper);
-    box-shadow:3px 3px 0 var(--ink);
+    background:#B93A66;
+    color:var(--ink);
+    box-shadow:3px 3px 0 #14161F;
   }
-  .btn-primary:hover{transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink);}
+  .btn-primary:hover{transform:translate(-1px,-1px); box-shadow:4px 4px 0 #14161F;}
   .btn-secondary{
     background:transparent;
     color:var(--ink);
